@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock title %}
+    </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        {% comment %} <h5 class="my-0 mr-md-auto font-weight-normal">IT_Java</h5> {% endcomment %}
+        <i class="fab fa-angrycreative my-1 mr-md-auto  "> Creative</i>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="mr-4 btn btn-primary btn-lg" href="{% url 'main' %}"> All Tasks</a>
+            <a class="mr-2 btn btn-success btn-lg" href="{% url 'create' %}">Add New</a>
+        </nav>
+    </div>
+    {% block text %}
+    
+    {% endblock text %}
+    
+</body>
+</html>
